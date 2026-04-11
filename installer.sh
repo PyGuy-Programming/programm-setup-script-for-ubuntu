@@ -68,6 +68,14 @@ make install
 echo "finished installing blobby-volley v1.1.1!"
 sleep 2
 clear
+echo "installing additional package manager (linuxbrew)"
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+echo >> /home/luca/.bashrc
+echo 'eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv bash)"' >> /home/luca/.bashrc
+eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv bash)"
+echo "finished installing linuxbrew!"
+sleep 2
+clear
 echo "cleaning everything up..."
 cat ~/start-position | rm -rf 
 rm -rf ~/start-position
